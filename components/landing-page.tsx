@@ -1,6 +1,6 @@
 'use client'
 
-import { Star, MapPin, Phone, Clock, ChevronRight, Menu, ExternalLink } from 'lucide-react'
+import { Star, MapPin, Phone, Clock,  Menu, ExternalLink } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -177,8 +177,8 @@ export function LandingPage() {
                         Jitendra has built a reputation for providing top-quality tools and exceptional customer service.
                       </p>
                       <p className="text-gray-600">
-                        "Our goal is to empower local craftsmen and DIY enthusiasts with the best tools in the market. We're not just selling 
-                        hardware; we're building relationships and supporting our community's projects and dreams."
+                      &quot;Our goal is to empower local craftsmen and DIY enthusiasts with the best tools in the market. We&apos;re not just selling 
+                        hardware; we&apos;re building relationships and supporting our community&apos;s projects and dreams.&quot;
                       </p>
                     </div>
                   </div>
@@ -194,7 +194,7 @@ export function LandingPage() {
                       <span className="ml-2 text-gray-600">4.8 out of 5 (9 reviews)</span>
                     </div>
                     <blockquote className="text-gray-600 italic">
-                      "Great product and price. Very nice shop with a wide variety of tools."
+                    &quot;Great product and price. Very nice shop with a wide variety of tools.&quot;
                     </blockquote>
                     <p className="mt-2 text-gray-500">- MD Asif Anwar</p>
                   </>
