@@ -1,11 +1,13 @@
 'use client'
 
-import { Star, MapPin, Phone, Clock,  Menu, ExternalLink } from 'lucide-react'
+import { Star, MapPin, Phone, Clock, Menu, ExternalLink } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import Image from 'next/image'
+import Link from 'next/link'
 
-export function LandingPage() {
+export default function LandingPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const scrollToSection = (sectionId: string) => {
@@ -31,7 +33,7 @@ export function LandingPage() {
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
-              <img src="/jht_logo.png" alt="Jyoti Hardware Tools Logo" className="h-10 w-10 mr-3" />
+              <Image src="/jht_logo.png" alt="Jyoti Hardware Tools Logo" width={40} height={40} className="mr-3" />
               <h1 className="text-2xl font-bold text-gray-900">Jyoti Hardware Tools</h1>
             </motion.div>
             <nav className="hidden md:flex space-x-4">
@@ -51,6 +53,7 @@ export function LandingPage() {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="md:hidden"
               whileTap={{ scale: 0.95 }}
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             >
               <Menu className="h-6 w-6 text-gray-500" />
             </motion.button>
@@ -131,9 +134,11 @@ export function LandingPage() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.4, duration: 0.5 }}
               >
-                <img 
+                <Image 
                   src="/jht_front.png" 
                   alt="Jyoti Hardware Tools Store Front" 
+                  width={500}
+                  height={300}
                   className="rounded-lg shadow-md"
                 />
               </motion.div>
@@ -165,10 +170,12 @@ export function LandingPage() {
                 )}
                 {section === 'owner' && (
                   <div className="flex flex-col md:flex-row items-center md:items-start">
-                    <img 
+                    <Image 
                       src="/jht_owner.png" 
                       alt="Jitendra Tiwary" 
-                      className="w-32 h-32 rounded-full mb-4 md:mb-0 md:mr-6"
+                      width={128}
+                      height={128}
+                      className="rounded-full mb-4 md:mb-0 md:mr-6"
                     />
                     <div>
                       <h3 className="text-xl font-semibold mb-2">Jitendra Tiwary</h3>
@@ -177,7 +184,7 @@ export function LandingPage() {
                         Jitendra has built a reputation for providing top-quality tools and exceptional customer service.
                       </p>
                       <p className="text-gray-600">
-                      &quot;Our goal is to empower local craftsmen and DIY enthusiasts with the best tools in the market. We&apos;re not just selling 
+                        &quot;Our goal is to empower local craftsmen and DIY enthusiasts with the best tools in the market. We&apos;re not just selling 
                         hardware; we&apos;re building relationships and supporting our community&apos;s projects and dreams.&quot;
                       </p>
                     </div>
@@ -194,7 +201,7 @@ export function LandingPage() {
                       <span className="ml-2 text-gray-600">4.8 out of 5 (9 reviews)</span>
                     </div>
                     <blockquote className="text-gray-600 italic">
-                    &quot;Great product and price. Very nice shop with a wide variety of tools.&quot;
+                      &quot;Great product and price. Very nice shop with a wide variety of tools.&quot;
                     </blockquote>
                     <p className="mt-2 text-gray-500">- MD Asif Anwar</p>
                   </>
@@ -254,7 +261,7 @@ export function LandingPage() {
                       ></iframe>
                     </div>
                     <div className="mt-4">
-                      <a
+                      <Link
                         href="https://www.google.com/maps/place/New+Market+Station+Rd,+Patna,+Bihar+800001/@25.5940919,85.1369473,17z/"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -262,7 +269,7 @@ export function LandingPage() {
                       >
                         View larger map
                         <ExternalLink className="ml-2 h-4 w-4" />
-                      </a>
+                      </Link>
                     </div>
                   </>
                 )}
@@ -278,12 +285,10 @@ export function LandingPage() {
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 0.5 }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <p className="text-center">© 2024 Jyoti Hardware Tools. All rights reserved.</p>
         </div>
       </motion.footer>
     </div>
   )
 }
-
-export default LandingPage
