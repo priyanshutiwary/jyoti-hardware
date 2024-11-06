@@ -31,7 +31,7 @@ export function LandingPage() {
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
-              <img src="/placeholder.svg?height=50&width=50" alt="Jyoti Hardware Tools Logo" className="h-10 w-10 mr-3" />
+              <img src="/jht_logo.png" alt="Jyoti Hardware Tools Logo" className="h-10 w-10 mr-3" />
               <h1 className="text-2xl font-bold text-gray-900">Jyoti Hardware Tools</h1>
             </motion.div>
             <nav className="hidden md:flex space-x-4">
@@ -132,7 +132,7 @@ export function LandingPage() {
                 transition={{ delay: 0.4, duration: 0.5 }}
               >
                 <img 
-                  src="/placeholder.svg?height=400&width=600" 
+                  src="/jht_front.png" 
                   alt="Jyoti Hardware Tools Store Front" 
                   className="rounded-lg shadow-md"
                 />
@@ -166,7 +166,7 @@ export function LandingPage() {
                 {section === 'owner' && (
                   <div className="flex flex-col md:flex-row items-center md:items-start">
                     <img 
-                      src="/placeholder.svg?height=200&width=200" 
+                      src="/jht_owner.png" 
                       alt="Jitendra Tiwary" 
                       className="w-32 h-32 rounded-full mb-4 md:mb-0 md:mr-6"
                     />
