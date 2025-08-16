@@ -1,7 +1,6 @@
 'use client'
 
 import { Star, MapPin, Phone, Clock, Menu, ExternalLink, Wrench, Truck, Shield, Award, ChevronRight, ArrowRight } from 'lucide-react'
-import { Button } from "@/components/ui/button"
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion'
 import Image from 'next/image'
@@ -352,8 +351,8 @@ export default function LandingPage() {
                     </div>
                   </div>
                   <blockquote className="text-lg italic leading-relaxed">
-                    "Our goal is to empower local craftsmen and DIY enthusiasts with the best tools in the market. 
-                    We're not just selling hardware; we're building relationships and supporting our community's projects and dreams."
+                    &ldquo;Our goal is to empower local craftsmen and DIY enthusiasts with the best tools in the market. 
+                    We&apos;re not just selling hardware; we&apos;re building relationships and supporting our community&apos;s projects and dreams.&rdquo;
                   </blockquote>
                 </div>
               </motion.div>
@@ -449,9 +448,9 @@ export default function LandingPage() {
                           <Star key={i} className="w-5 h-5 fill-current" />
                         ))}
                       </div>
-                  <blockquote className="text-gray-700 mb-4 italic leading-relaxed">
-                    "{review.text}"
-                    </blockquote>
+                                    <blockquote className="text-gray-700 mb-4 italic leading-relaxed">
+                    &ldquo;{review.text}&rdquo;
+                  </blockquote>
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="font-semibold text-gray-900">{review.name}</p>
